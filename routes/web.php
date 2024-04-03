@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\CrudUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('login', [CrudUserController::class, 'login'])->name('login');
+
+Route::post('login',[CrudUserController::class, 'authUser'])->name('user.authUser');
