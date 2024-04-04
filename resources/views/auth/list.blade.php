@@ -1,5 +1,12 @@
 @extends('dashboard')
 @section('content')
+
+<div class="mt-5">
+  
+  @if(session()->has('success'))
+  <div class="alert alert-success">{{session('success')}}</div>
+  @endif
+</div>
 <table class="table">
   <thead>
     <tr>
